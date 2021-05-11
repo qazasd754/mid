@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人履歷</title>
+    <style>
+        @import url("msw.css");
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body class="B">
+<div class="d1">
+<header>  
+  <div >
+    <img class="i1" src="img/me.png" >
+  </div>
+<div class="d2">
+    <h1 class="p1">劉易孝</h1>
+    </div>
+    
+<div class="d3">
+    <p class="p3">中原大學 資訊管理學系</p>
+</div>
+<hr>
+<a href="https://www.facebook.com/profile.php?id=100005664851765"><img class="i2" src="img/FB.png" ></a>
+<a href="mailto:s10844218@cycu.edu.tw"><img class="i2" src="img/gmail.png" ></a>
+<div class="d3">
+    <blockquote class="b1">
+    <p >~<i>Learn and live.~</i></p>
+    </blockquote>
+</div>
+</header>
+<div class="d4">
+<h1 class="p1">程式能力</h1>
+<div class="skills">
+    <div class="skill">
+      <div class="skill-name"><img src="img/html.png" width="60px" height="60px">HTML</img></div>
+      <div class="skill-bar">
+        <div class="skill-per" per="65"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name"><img src="img/css.png" width="60px" height="60px">CSS</img></div>
+      <div class="skill-bar">
+        <div class="skill-per" per="60"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name"><img src="img/javascript.png" width="60px" height="60px">Javascript</img></div>
+      <div class="skill-bar">
+        <div class="skill-per" per="60"></div>
+      </div>
+    </div>
+    <div class="skill">
+        <div class="skill-name"><img src="img/PHP.png" width="60px" height="60px">PHP</img></div>
+        <div class="skill-bar">
+          <div class="skill-per" per="40"></div>
+        </div>
+      </div>
+  </div>
+
+  <script>
+    $('.skill-per').each(function(){
+      var $this = $(this);
+      var per = $this.attr('per');
+      $this.css("width",per+'%');
+      $({animatedValue: 0}).animate({animatedValue: per},{
+        duration: 1000,
+        step: function(){
+          $this.attr('per', Math.floor(this.animatedValue) + '%');
+        },
+        complete: function(){
+          $this.attr('per', Math.floor(this.animatedValue) + '%');
+        }
+      });
+    });
+  </script>
+</div>
+<div class="d5">
+ <h1 class="p1">經歷</h1>
+ 
+ <div class="timeline">
+    <div class="line"></div>
+    <div class="section">
+      <div class="bead"></div>
+      <div class="content">
+        <h2>大一</h2>
+        <p class="p4">大一上的時候參與了管理學課程的服務學習項目，到柏圓護理之家和老人們進行互動</p>
+        <img class="i3" src="img/管理學報告_210511.jpg" >
+      </div>
+    </div>
+    <div class="section">
+      <div class="bead"></div>
+      <div class="content">
+        <h2>大一下</h2>
+
+        <p class="p4">大一下 企業概論 與方舟教養院合作義賣蛋捲，真槍實彈進行商廣販售</p>
+        <img  class="i4" src="img/企業概論.jpg" >
+      </div>
+    </div>
+    <div class="section">
+      <div class="bead"></div>
+      <div class="content">
+        <h2>大二上</h2>
+        <p>大二上 工程倫理與組員共同探討維冠金龍大樓倒塌案</p>
+        <img class="i3" src="img/維冠.png">
+      </div>
+    </div>
+    <div class="section">
+      <div class="bead"></div>
+      <div class="content">
+        <h2>大二下</h2>
+        <p>就是近期與小組成員使用HTML和CSS，完成的介紹有關社團的網站</p>
+        <img class="i4" src="img/網站.jpg">
+      </div>
+    </div>
+
+  
+
+ </div>
+ <script src="timeline.js"></script>
+</div>
+<div class="d6">
+  <img class="i5" src="img/開發.JPG">
+  <pre>
+  <h2 class="v2">開發環境</h2>
+  
+</pre>
+</div >
+
+</div>
+
+
+</body>
+</html>
